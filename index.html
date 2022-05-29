@@ -1,228 +1,304 @@
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Zhypower presentation</title>
+    <meta name="description" content="A webtime story" />
+    <link href="css.css" rel="stylesheet" type="text/css" media="all" />
+  </head>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <body>
+    <div id="dangban"></div>
 
-	<title>Woo Parallaxer Demo!!</title>
-	<meta name="description" content="A webtime story" />
+    <ul id="panelControl">
+      <li>
+        <a href="#c_1" title="Panel 1"><span>1</span></a>
+      </li>
+      <li>
+        <a href="#c_2" title="Panel 2"><span>2</span></a>
+      </li>
+      <li>
+        <a href="#c_3" title="Panel 3"><span>3</span></a>
+      </li>
+      <li>
+        <a href="#c_4" title="Panel 4"><span>4</span></a>
+      </li>
+      <li>
+        <a href="#c_5" title="Panel 5"><span>5</span></a>
+      </li>
+      <li>
+        <a href="#c_6" title="Panel 6"><span>6</span></a>
+      </li>
+    </ul>
+    <div id="overflowControl">
+      <div id="layerSling">
+        <div id="layerA">
+          <div class="p">
+            <img src="./assets/a1.png" />
+          </div>
+          <div class="p">
+            <img src="./assets/a2.png" />
+          </div>
+          <div class="p">
+            3a
+            <img src="./assets/a3.png" />
+          </div>
+          <div class="p">4a</div>
+          <div class="p">5a</div>
+          <div class="p">6a</div>
+        </div>
+        <div id="layerB">
+          <div class="p" id="c_1">
+            1b<img src="./assets/b1.png" />
+            <div class="narrative">
+              <p>It is zhypower's presentation.</p>
+              <p>Let me show you.</p>
+            </div>
+          </div>
+          <div class="p" id="c_2">
+            2b
+            <div class="narrative">
+              <p>
+                Laboris occaecat ut dolore minim, non shankle laborum sausage
+                boudin meatball shoulder.
+              </p>
+            </div>
+          </div>
+          <div class="p" id="c_3">
+            3b
+            <div class="narrative">
+              <p>
+                Pastrami shankle ad chuck, chicken in strip steak pariatur culpa
+                ex fatback sunt incididunt exercitation elit.
+              </p>
+            </div>
+          </div>
+          <div class="p" id="c_4">
+            4b
+            <div class="narrative">
+              <p>
+                Elit dolor labore in pork tempor tri-tip cillum tenderloin duis,
+                eiusmod ut aliquip strip steak.
+              </p>
+            </div>
+          </div>
+          <div class="p" id="c_5">
+            5b
+            <div class="narrative">
+              <p>
+                Pancetta swine in dolore id laborum, cupidatat adipisicing
+                mollit.
+              </p>
+            </div>
+          </div>
+          <div class="p" id="c_6">
+            6b
+            <div class="narrative">
+              <p>
+                Officia incididunt adipisicing pancetta, ut veniam spare ribs
+                cillum tempor flank chuck ex consectetur.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="layerC">
+          <div class="p">
+            1c
+            <img src="./assets/c1.png" />
+          </div>
+          <div class="p">2c</div>
+          <div class="p">3c</div>
+          <div class="p">4c</div>
+          <div class="p">5c</div>
+          <div class="p">6c</div>
+        </div>
+        <div id="layerD">
+          <div class="p">1d<img src="./assets/d1.png" /></div>
+          <div class="p">2d</div>
+          <div class="p">3d</div>
+          <div class="p">4d</div>
+          <div class="p">5d</div>
+          <div class="p">6d</div>
+        </div>
+        <div id="layerE">
+          <div class="p">1e<img src="./assets/e1.png" /></div>
+          <div class="p">2e</div>
+          <div class="p">3e</div>
+          <div class="p">4e</div>
+          <div class="p">5e</div>
+          <div class="p">6e</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- 判断是否为pc -->
+  <script>
+    let isPCValue = undefined;
+    const isPC = () => {
+      if (isPCValue !== undefined) {
+        return isPCValue;
+      }
 
+      const userAgent = (navigator.userAgent || "").toLowerCase();
+      const mobileUATags = [
+        "android",
+        "iphone",
+        "symbianos",
+        "windows phone",
+        "ipod",
+        "ipad",
+      ];
 
-	<link href="css.css" rel="stylesheet" type="text/css" media="all" />
+      isPCValue = false;
 
+      const matchMobileUATag = mobileUATags.find((tag) => {
+        return userAgent.indexOf(tag) >= 0;
+      });
 
-</head>
+      if (!matchMobileUATag || window.screen.width >= 768) {
+        isPCValue = true;
+      }
 
-<body>
-	<ul id="panelControl">
-		<li><a href="#c_1" title="Panel 1"><span>1</span></a></li>
-		<li><a href="#c_2" title="Panel 2"><span>2</span></a></li>
-		<li><a href="#c_3" title="Panel 3"><span>3</span></a></li>
-		<li><a href="#c_4" title="Panel 4"><span>4</span></a></li>
-		<li><a href="#c_5" title="Panel 5"><span>5</span></a></li>
-		<li><a href="#c_6" title="Panel 6"><span>6</span></a></li>
-	</ul>
-	<div id="overflowControl">
-		<div id="layerSling">
-			<div id="layerA">
-				<div class="p">
-					<img src="./assets/a1.png" />
-				</div>
-				<div class="p">
-					<img src="./assets/a2.png" />
-				</div>
-				<div class="p">3a
-					<img src="./assets/a3.png" />
-				</div>
-				<div class="p">4a</div>
-				<div class="p">5a</div>
-				<div class="p">6a</div>
-			</div>
-			<div id="layerB">
-				<div class="p" id="c_1">1b<img src="./assets/b1.png" />
-					<div class="narrative">
-
-
-						<p>Bacon ipsum dolor sit amet anim jerky sirloin, brisket salami cillum jowl.</p>
-					</div>
-				</div>
-				<div class="p" id="c_2">2b<div class="narrative">
-						<p>Laboris occaecat ut dolore minim, non shankle laborum sausage boudin meatball shoulder.</p>
-					</div>
-				</div>
-				<div class="p" id="c_3">3b<div class="narrative">
-						<p>Pastrami shankle ad chuck, chicken in strip steak pariatur culpa ex fatback sunt incididunt
-							exercitation elit.</p>
-					</div>
-				</div>
-				<div class="p" id="c_4">4b<div class="narrative">
-						<p>Elit dolor labore in pork tempor tri-tip cillum tenderloin duis, eiusmod ut aliquip strip
-							steak.</p>
-					</div>
-				</div>
-				<div class="p" id="c_5">5b<div class="narrative">
-						<p>Pancetta swine in dolore id laborum, cupidatat adipisicing mollit.</p>
-					</div>
-				</div>
-				<div class="p" id="c_6">6b<div class="narrative">
-						<p>Officia incididunt adipisicing pancetta, ut veniam spare ribs cillum tempor flank chuck ex
-							consectetur.</p>
-					</div>
-				</div>
-			</div>
-			<div id="layerC">
-				<div class="p">1c
-					<img src="./assets/c1.png" />
-				</div>
-				<div class="p">2c
-				</div>
-				<div class="p">3c</div>
-				<div class="p">4c</div>
-				<div class="p">5c</div>
-				<div class="p">6c</div>
-			</div>
-			<div id="layerD">
-				<div class="p">1d<img src="./assets/d1.png" /></div>
-				<div class="p">2d</div>
-				<div class="p">3d</div>
-				<div class="p">4d</div>
-				<div class="p">5d</div>
-				<div class="p">6d</div>
-			</div>
-			<div id="layerE">
-				<div class="p">1e<img src="./assets/e1.png" /></div>
-				<div class="p">2e</div>
-				<div class="p">3e</div>
-				<div class="p">4e</div>
-				<div class="p">5e</div>
-				<div class="p">6e</div>
-			</div>
-		</div>
-	</div>
-</body>
-<!-- 判断是否为pc -->
-<script>
-	let isPCValue = undefined;
-	const isPC = () => {
-		if (isPCValue !== undefined) {
-			return isPCValue;
-		}
-
-		const userAgent = (navigator.userAgent || '').toLowerCase();
-		const mobileUATags = [
-			'android',
-			'iphone',
-			'symbianos',
-			'windows phone',
-			'ipod',
-			'ipad',
-		];
-
-		isPCValue = false;
-
-		const matchMobileUATag = mobileUATags.find(tag => {
-			return userAgent.indexOf(tag) >= 0;
-		});
-
-		if (!matchMobileUATag || window.screen.width >= 768) {
-			isPCValue = true;
-		}
-
-		return isPCValue;
-	}
-	if (!isPC()) {
-		console.log('isPc', isPC(), window.screen, document.querySelector('#overflowControl').offsetHeight);
-		document.querySelector('body').style.transform = `rotate(90deg) scale(${document.querySelector('#overflowControl').offsetHeight/window.screen.width})`;// 旋转90度
-		document.querySelector('#panelControl').style.opacity = '0';
-		document.querySelector('#panelControl').style.pointerEvents = 'none';
-
-	}
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
-<script src="jquery.easing.1.3.js" type="text/javascript"></script>
-<script src="jquery.scrollTo-1.4.2-min.js" type="text/javascript"></script>
-<script src="parallaxer.js" type="text/javascript"></script>
-<script type="text/javascript" charset="utf-8">
-	/*
+      return isPCValue;
+    };
+    if (!isPC()) {
+      console.log(
+        "isPc",
+        isPC(),
+        window.screen,
+        document.querySelector("#overflowControl").offsetHeight
+      );
+      document.querySelector("body").style.transform = `rotate(90deg) scale(${
+        document.querySelector("#overflowControl").offsetHeight /
+        window.screen.width
+      })`; // 旋转90度
+      document.querySelector("#panelControl").style.opacity = "0";
+      document.querySelector("#panelControl").style.pointerEvents = "none";
+    }
+  </script>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"
+    type="text/javascript"
+  ></script>
+  <script src="jquery.easing.1.3.js" type="text/javascript"></script>
+  <script src="jquery.scrollTo-1.4.2-min.js" type="text/javascript"></script>
+  <script src="parallaxer.js" type="text/javascript"></script>
+  <script type="text/javascript" charset="utf-8">
+    /*
 	<![CDATA[ */
-	function panelEvSniffer() {
-		var scroll = isPC() ? $(window).scrollLeft() : $(window).scrollTop();
-		// 与上面body的scale对应
-		var scaleBody = isPC() ? 1 : document.querySelector('#overflowControl').offsetHeight/window.screen.width;
+    function panelEvSniffer() {
+      var scroll = isPC() ? $(window).scrollLeft() : $(window).scrollTop();
+      // 与上面body的scale对应
+      var scaleBody = isPC()
+        ? 1
+        : document.querySelector("#overflowControl").offsetHeight /
+          window.screen.width;
 
-		if (scroll >= -200*scaleBody && scroll < 200*scaleBody && p.panelHovered != 1) {
-			p.panelNarr('#c_1');
-			p.panelHovered = 1;
-		} else if (scroll >= 200*scaleBody && scroll < 600*scaleBody && p.panelHovered != 2) {
-			p.panelNarr('#c_2');
-			p.panelHovered = 2;
-		} else if (scroll >= 600*scaleBody && scroll < 1000*scaleBody && p.panelHovered != 3) {
-			p.panelNarr('#c_3');
-			p.panelHovered = 3;
-		} else if (scroll >= 1000*scaleBody && scroll < 1400*scaleBody && p.panelHovered != 4) {
-			p.panelNarr('#c_4');
-			p.panelHovered = 4;
-		} else if (scroll >= 1400*scaleBody && scroll < 1800*scaleBody && p.panelHovered != 5) {
-			p.panelNarr('#c_5');
-			p.panelHovered = 5;
-		} else if (scroll >= 1800*scaleBody && scroll < 2200*scaleBody && p.panelHovered != 6) {
-			p.panelNarr('#c_6');
-			p.panelHovered = 6;
-		}
-	}
-	// window.onload = () => {
-	// 	document.querySelector('#overflowControl').style.top = `${window.innerHeight/2 - 250}px`;
-	// 	document.querySelector('#panelControl').style.top = `${window.innerHeight/2 - 300}px`;
-	// }
-	// window.onresize = () => {
-	// 	document.querySelector('#overflowControl').style.top = `${window.innerHeight/2 - 250}px`;
-	// 	document.querySelector('#panelControl').style.top = `${window.innerHeight/2 - 300}px`;
-	// }
+      if (
+        scroll >= -200 * scaleBody &&
+        scroll < 200 * scaleBody &&
+        p.panelHovered != 1
+      ) {
+        p.panelNarr("#c_1");
+        p.panelHovered = 1;
+      } else if (
+        scroll >= 200 * scaleBody &&
+        scroll < 600 * scaleBody &&
+        p.panelHovered != 2
+      ) {
+        p.panelNarr("#c_2");
+        p.panelHovered = 2;
+      } else if (
+        scroll >= 600 * scaleBody &&
+        scroll < 1000 * scaleBody &&
+        p.panelHovered != 3
+      ) {
+        p.panelNarr("#c_3");
+        p.panelHovered = 3;
+      } else if (
+        scroll >= 1000 * scaleBody &&
+        scroll < 1400 * scaleBody &&
+        p.panelHovered != 4
+      ) {
+        p.panelNarr("#c_4");
+        p.panelHovered = 4;
+      } else if (
+        scroll >= 1400 * scaleBody &&
+        scroll < 1800 * scaleBody &&
+        p.panelHovered != 5
+      ) {
+        p.panelNarr("#c_5");
+        p.panelHovered = 5;
+      } else if (
+        scroll >= 1800 * scaleBody &&
+        scroll < 2200 * scaleBody &&
+        p.panelHovered != 6
+      ) {
+        p.panelNarr("#c_6");
+        p.panelHovered = 6;
+      }
+    }
+    // window.onload = () => {
+    // 	document.querySelector('#overflowControl').style.top = `${window.innerHeight/2 - 250}px`;
+    // 	document.querySelector('#panelControl').style.top = `${window.innerHeight/2 - 300}px`;
+    // }
+    // window.onresize = () => {
+    // 	document.querySelector('#overflowControl').style.top = `${window.innerHeight/2 - 250}px`;
+    // 	document.querySelector('#panelControl').style.top = `${window.innerHeight/2 - 300}px`;
+    // }
 
-	/* ]]> */
-</script>
+    /* ]]> */
+  </script>
 
-<!-- 鼠标滚轮横向滚动 -->
-<script>
-	const container = document.querySelector('body');
-	//判断浏览器
-	let isIE = navigator.userAgent.match(/MSIE (\d)/i);
-	isIE = isIE ? isIE[1] : undefined;
-	let isFF = /FireFox/i.test(navigator.userAgent);
+  <!-- 鼠标滚轮横向滚动 -->
+  <script>
+    const container = document.querySelector("body");
+    //判断浏览器
+    let isIE = navigator.userAgent.match(/MSIE (\d)/i);
+    isIE = isIE ? isIE[1] : undefined;
+    let isFF = /FireFox/i.test(navigator.userAgent);
 
-	if (isIE < 9) //传统浏览器使用MouseWheel事件
-		container.attachEvent("onmousewheel", function (e) {
-			//计算鼠标滚轮滚动的距离
-			//一格3行，每行40像素
-			let v = e.wheelDelta / 2;
-			container.scrollLeft += v;
-			//阻止浏览器默认方法
-			return false;
-		});
-	else if (!isFF) //除火狐外的现代浏览器也使用MouseWheel事件
-		container.addEventListener("mousewheel", function (e) {
-			//计算鼠标滚轮滚动的距离
-			let v = -e.wheelDelta / 2;
-			container.scrollLeft += v;
-			//阻止浏览器默认方法
-			e.preventDefault();
-		}, false);
-	else //火狐使用DOMMouseScroll事件
-		container.addEventListener("DOMMouseScroll", function (e) {
-			//计算鼠标滚轮滚动的距离
-			//一格是3行，但是要注意，这里和像素不同的是它是负值
-			container.scrollLeft += e.detail * 80;
-			//阻止浏览器默认方法
-			e.preventDefault();
+    if (isIE < 9)
+      //传统浏览器使用MouseWheel事件
+      container.attachEvent("onmousewheel", function (e) {
+        //计算鼠标滚轮滚动的距离
+        //一格3行，每行40像素
+        let v = e.wheelDelta / 2;
+        container.scrollLeft += v;
+        //阻止浏览器默认方法
+        return false;
+      });
+    else if (!isFF)
+      //除火狐外的现代浏览器也使用MouseWheel事件
+      container.addEventListener(
+        "mousewheel",
+        function (e) {
+          //计算鼠标滚轮滚动的距离
+          let v = -e.wheelDelta / 2;
+          container.scrollLeft += v;
+          //阻止浏览器默认方法
+          e.preventDefault();
+        },
+        false
+      );
+    //火狐使用DOMMouseScroll事件
+    else
+      container.addEventListener(
+        "DOMMouseScroll",
+        function (e) {
+          //计算鼠标滚轮滚动的距离
+          //一格是3行，但是要注意，这里和像素不同的是它是负值
+          container.scrollLeft += e.detail * 80;
+          //阻止浏览器默认方法
+          e.preventDefault();
+        },
+        false
+      );
+  </script>
 
-		}, false);
-</script>
-
-<!-- 注入vconsole -->
-<script src="https://cdn.bootcss.com/vConsole/3.3.0/vconsole.min.js"></script>
-<script>
-	const vConsole = new VConsole();
-</script>
-
+  <!-- 注入vconsole -->
+  <!-- <script src="https://cdn.bootcss.com/vConsole/3.3.0/vconsole.min.js"></script>
+  <script>
+    const vConsole = new VConsole();
+  </script> -->
 </html>

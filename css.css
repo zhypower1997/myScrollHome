@@ -2,110 +2,133 @@
 
 /* GENERAL and CLEANUP */
 * {
-	margin: 0px;
-	padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 img {
-	border: 0px;
-	vertical-align: bottom;
+  border: 0px;
+  vertical-align: bottom;
 }
 
 body {
-	background-color: #152a35;
-	font-size: 14px;
-	font-family: '微软雅黑', Monaco, Courier, monospace;
-	color: #fff;
+  background-color: #121013;
+  font-size: 14px;
+  font-family: "华文仿宋";
+  color: #fff;
 }
-
+#dangban {
+  width: 150px;
+  height: 100vh;
+  position: fixed;
+  background: rgb(119, 168, 255);
+  background: linear-gradient(
+    58deg,
+    rgba(59, 59, 59, 1) 0%,
+    rgb(73, 73, 73) 60%,
+    rgba(241, 198, 108, 1) 100%
+  );
+  z-index: 100;
+}
 /* PARALLAXER */
 ul#panelControl {
-	position: fixed;
-	top: 13px;
-	left: 70px;
-	z-index: 999;
+  position: fixed;
+  bottom: 50px;
+  left: 200px;
+  z-index: 999;
 }
 
 ul#panelControl li {
-	float: left;
-	display: block;
-	padding-right: 3px;
+  float: left;
+  display: block;
+  padding-right: 3px;
 }
 
 ul#panelControl li a {
-	display: block;
-	border-radius: 20px;
-	background-color: rgb(161, 170, 248);
-	color: #fff;
-	width: 26px;
-	height: 26px;
-	text-align: center;
-	font-size: 20px;
-	line-height: 22px;
-	text-decoration: none;
+  display: block;
+  border-radius: 2px;
+  /* border: 0.5px solid #868686; */
+  background-color: transparent;
+  color: #fff;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 22px;
+  text-decoration: none;
 }
 
 ul#panelControl li a.clicked {
-	opacity: 0.3;
-	filter: alpha(opacity=30);
+  /* opacity: 0.3; */
+  /* filter: alpha(opacity=30); */
+  border: none;
+  background: rgb(59, 59, 59);
+  background: linear-gradient(
+    158deg,
+    rgba(59, 59, 59, 1) 0%,
+    rgb(88, 88, 88) 60%,
+    rgba(241, 198, 108, 1) 100%
+  );
 }
 
 ul#panelControl li a:hover {
-	text-decoration: none;
-	opacity: 1;
-	filter: alpha(opacity=100);
-	background-color: #fff;
-	color: rgb(161, 170, 248);
-	box-shadow: 0px 5px 5px rgb(161, 170, 248);
+  text-decoration: none;
+  opacity: 1;
+  /* filter: alpha(opacity=100); */
+
+  background-color: #fff;
+  color: #f4c66d;
+  box-shadow: 0px 5px 5px #f4c66d;
 }
 
 ul#panelControl li a span {
-	display: block;
-	padding-top: 2px;
+  display: block;
+  padding-top: 2px;
 }
 
 #overflowControl {
-	overflow: hidden;
-	position: relative;
-	height: 620px;
-	top: 90px;
+  overflow: hidden;
+  position: relative;
+  height: 620px;
+  top: 130px;
 }
 
-#layerSling {}
+#layerSling {
+}
 
-#layerSling>div {
-	display: block;
-	position: absolute;
-	top: 0px;
-	left: 0;
+#layerSling > div {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0;
 }
 
 #layerSling .p {
-	height: 400px;
-	float: left;
-	position: relative;
-	overflow: visible;
-	text-align: center;
+  height: 400px;
+  float: left;
+  position: relative;
+  overflow: visible;
+  text-align: center;
 }
 
 #layerSling .p img {
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #layerB .p {
-	width: 400px;
+  width: 400px;
 }
 
 #layerB .p .narrative {
-	position: absolute;
-	top: 400px;
-	left: 0;
-	width: 360px;
-	padding: 20px;
-	text-align: left;
+  position: absolute;
+  top: 400px;
+  left: 0;
+  width: 360px;
+  padding: 20px;
+  text-align: left;
 }
 
 /* FLAIR
