@@ -131,6 +131,12 @@ ul#panelControl li a span {
   text-align: left;
 }
 
+#layerB .p {
+  font-family: "方正吕建德字体";
+}
+#layerSling {
+  color: transparent;
+}
 /* FLAIR
 #layerA .p {
 	width: 300px;
@@ -143,6 +149,7 @@ ul#panelControl li a span {
 	box-shadow: inset 5px -40px 40px rgba(187, 135, 197, 0.9);
 	color: #86578f;
 }
+
 
 #layerC .p {
 	width: 500px;
